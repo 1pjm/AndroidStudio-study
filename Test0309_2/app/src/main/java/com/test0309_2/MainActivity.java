@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
+        //리스너 버튼
         Button btn2=findViewById(R.id.btn2);
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //함수 버튼
     public void sendBtn1(View v) {
         Toast.makeText(getApplicationContext(), "안녕하세요. 버튼1 입니다.", Toast.LENGTH_SHORT).show();
     }

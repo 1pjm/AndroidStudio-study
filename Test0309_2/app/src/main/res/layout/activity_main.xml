@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+<!--    버튼1: 함수버튼-->
     <Button
         android:id="@+id/btn1"
         android:layout_width="wrap_content"
@@ -20,6 +21,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.058" />
 
+<!--    버튼2: 리스너 버튼-->
     <Button
         android:id="@+id/btn2"
         android:layout_width="wrap_content"
@@ -30,6 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn1" />
 
+<!--    버튼3: 네이버 웹 이동-->
     <Button
         android:id="@+id/btn3"
         android:layout_width="wrap_content"
@@ -42,6 +45,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn2"
         android:onClick="onBtn3"/>
 
+<!--    버튼4: 전화걸기-->
     <Button
         android:id="@+id/btn4"
         android:layout_width="wrap_content"
