@@ -25,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
+
         //리스너 버튼
         Button btn2=findViewById(R.id.btn2);
         btn2.setOnClickListener(new View.OnClickListener() {
