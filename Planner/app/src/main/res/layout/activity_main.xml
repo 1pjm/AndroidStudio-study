@@ -57,6 +57,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+
     <!-- 4) 이 달의 할일 -->
     <EditText
         android:id="@+id/etMonthlyTodo"

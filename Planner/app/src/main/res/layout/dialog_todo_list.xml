@@ -2,16 +2,18 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:padding="16dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@android:color/white">
 
-    <!-- 선택한 날짜 + 요일 -->
+    <!-- 상단: 날짜 + 요일 + +버튼 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
         <TextView
             android:id="@+id/tvDialogDate"
             android:layout_width="0dp"
@@ -20,39 +22,44 @@
             android:text="5월 24일 (토)"
             android:textSize="18sp"
             android:textStyle="bold"/>
+
         <ImageButton
             android:id="@+id/btnAddTodo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:src="@android:drawable/ic_input_add"
-            android:contentDescription="추가"/>
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="할 일 추가"/>
     </LinearLayout>
 
-    <!-- 할일 목록 (체크박스 + Dropdown) -->
+    <!-- 할 일 목록 -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvTodoList"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="12dp"/>
 
-    <!-- 하단 컨트롤: 전체선택, 전체삭제, 선택삭제 -->
+    <!-- 하단 버튼들 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_marginTop="16dp">
+
         <Button
             android:id="@+id/btnSelectAll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="전체선택"/>
+
         <Button
             android:id="@+id/btnDeleteAll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="전체삭제"
             android:layout_marginStart="8dp"/>
+
         <Button
             android:id="@+id/btnDeleteSelected"
             android:layout_width="wrap_content"

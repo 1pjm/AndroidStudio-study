@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_edit"
+        android:title="수정"/>
+    <item android:id="@+id/action_move_tomorrow"
+        android:title="내일 하기"/>
+    <item android:id="@+id/action_copy_tomorrow"
+        android:title="내일 또 하기"/>
+    <item android:id="@+id/action_move_date"
+        android:title="날짜 지정"/>
+</menu>
