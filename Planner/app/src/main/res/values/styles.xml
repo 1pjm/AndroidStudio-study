@@ -10,4 +10,22 @@
         <item name="android:textSize">16sp</item>
         <item name="android:padding">10dp</item>
     </style>
+
+    <style name="RoundedButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:textColor">@android:color/white</item>
+
+        <!-- 최소 높이/너비 줄이기 -->
+        <item name="android:minHeight">38dp</item>
+        <item name="android:minWidth">70dp</item>
+
+        <!-- 텍스트 패딩 줄여서 높이 더 줄이기 -->
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+
+        <item name="android:textSize">17sp</item>
+    </style>
+
 </resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 배경 색 -->
+    <solid android:color="@color/buttonBackground"/>
+
+    <!-- 모서리 둥글기 (높이의 절반 정도로 하면 완전 옆으로 긴 타원) -->
+    <corners android:radius="24dp"/>
+
+    <!-- 최소 크기 지정 -->
+    <size
+        android:width="60dp"
+        android:height="20dp"/>
+
+    <!-- 눌렀을 때 약간 어두워지게 하려면 선택자 추가 가능 -->
+</shape>

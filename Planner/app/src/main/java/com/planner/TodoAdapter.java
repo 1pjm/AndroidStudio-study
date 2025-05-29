@@ -54,6 +54,7 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.VH> {
         TodoItem it = items.get(pos);  // 변수 it는 이 한 줄로만 선언!
         h.check.setOnCheckedChangeListener(null);
         h.check.setChecked(it.isDone());
+        h.text.setVisibility(View.VISIBLE);
         h.text.setText(it.getText());
         h.text.setPaintFlags(
                 it.isDone()
@@ -134,7 +135,12 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.VH> {
         });
     }
 
-
+    // **추가**: 뷰홀더가 재활용될 때 텍스트뷰가 invisible 상태로 남지 않도록!
+    @Override
+    public void onViewRecycled(@NonNull VH holder) {
+        super.onViewRecycled(holder);
+        holder.text.setVisibility(View.VISIBLE);
+    }
 
     @Override public int getItemCount() { return items.size(); }
 
