@@ -26,6 +26,11 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
+
+
 public class MainActivity extends AppCompatActivity {
     private TextView      tvYear, tvMonth;
     private EditText      etMonthlyTodo;
@@ -41,12 +46,18 @@ public class MainActivity extends AppCompatActivity {
 
     private AlertDialog currentTodoDialog;
     private boolean     calendarInitialized = false;
+    private AdView adView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         prefs = getSharedPreferences("planner_prefs", MODE_PRIVATE);
         setContentView(R.layout.activity_main);
+
+        MobileAds.initialize(this, initializationStatus -> {});
+        adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         // 뷰 바인딩
         tvYear        = findViewById(R.id.tvYear);
@@ -243,7 +254,7 @@ public class MainActivity extends AppCompatActivity {
         View dialogView = LayoutInflater.from(this)
                 .inflate(R.layout.dialog_todo_list, null);
         TextView tvDate    = dialogView.findViewById(R.id.tvDialogDate);
-        ImageButton btnAdd = dialogView.findViewById(R.id.btnAddTodo);
+        Button btnAdd = dialogView.findViewById(R.id.btnAddTodo);
         RecyclerView rv    = dialogView.findViewById(R.id.rvTodoList);
         Button btnSelectAll    = dialogView.findViewById(R.id.btnSelectAll);
         Button btnDeleteAll    = dialogView.findViewById(R.id.btnDeleteAll);
