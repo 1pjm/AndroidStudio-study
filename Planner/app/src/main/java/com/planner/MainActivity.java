@@ -261,6 +261,9 @@ public class MainActivity extends AppCompatActivity {
         rv.setLayoutManager(new LinearLayoutManager(this));
         rv.setAdapter(adapter);
 
+        rv.getRecycledViewPool().clear();
+        adapter.notifyDataSetChanged();
+
         // 3) + 버튼: 다이얼로그로 입력받고 추가
         btnAdd.setOnClickListener(v -> {
             final EditText input = new EditText(this);

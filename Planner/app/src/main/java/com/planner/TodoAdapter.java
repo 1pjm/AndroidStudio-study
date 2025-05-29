@@ -13,10 +13,12 @@ import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.Calendar;
 import java.util.Iterator;
 import java.util.List;
+import androidx.core.content.ContextCompat;
 
 public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.VH> {
 
@@ -131,6 +133,7 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoAdapter.VH> {
             pm.show();
         });
     }
+
 
 
     @Override public int getItemCount() { return items.size(); }
