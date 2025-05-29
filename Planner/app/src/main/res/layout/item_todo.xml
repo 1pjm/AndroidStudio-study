@@ -11,7 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <TextView
         android:id="@+id/tvTodo"
@@ -20,16 +21,16 @@
         android:paddingStart="8dp"
         android:textSize="16sp"
         android:minWidth="100dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/cbTodo"
         app:layout_constraintStart_toEndOf="@id/cbTodo"
-        app:layout_constraintEnd_toStartOf="@id/ivMenu"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintEnd_toStartOf="@id/ivMenu"/>
 
     <ImageView
         android:id="@+id/ivMenu"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:src="@android:drawable/arrow_down_float"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_expand_more"
         android:contentDescription="메뉴"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvTodo"/>
+        app:layout_constraintBaseline_toBaselineOf="@id/tvTodo"
+        app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

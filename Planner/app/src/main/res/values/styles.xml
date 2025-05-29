@@ -28,4 +28,28 @@
         <item name="android:textSize">17sp</item>
     </style>
 
+    <!-- 다이얼로그 전용 오버레이 테마 -->
+    <style name="CustomAlertDialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <!-- 긍정/부정 버튼에 각각 이 스타일을 적용 -->
+        <item name="buttonBarPositiveButtonStyle">
+            @style/CustomDialogButton
+        </item>
+        <item name="buttonBarNegativeButtonStyle">
+            @style/CustomDialogButton
+        </item>
+    </style>
+
+    <!-- 다이얼로그 내부 버튼 스타일 -->
+    <style name="CustomDialogButton" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <!-- 텍스트 색만 검정으로 바꾸고 싶으면 아래만 사용 -->
+        <item name="android:textColor">@color/white</item>
+        <!-- 만약 둥근 배경도 그대로 쓰고 싶다면 주석 해제 -->
+        <item name="android:background">@drawable/rounded_button</item>
+        <item name="android:minWidth">60dp</item>
+        <item name="android:minHeight">32dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginStart">8dp</item>
+    </style>
+
 </resources>

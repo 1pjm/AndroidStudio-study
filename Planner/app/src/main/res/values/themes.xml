@@ -27,9 +27,8 @@
         <!-- Customize your theme here -->
         <item name="colorAccent">#03DAC5</item>
         <item name="android:buttonStyle">@style/RoundedButton</item>
+        <item name="alertDialogTheme">@style/CustomAlertDialogTheme</item>
     </style>
-
-
 
     <style name="Theme.Planner" parent="AppTheme" />
 </resources>
